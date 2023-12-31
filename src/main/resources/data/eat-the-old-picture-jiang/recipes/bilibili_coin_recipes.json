@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "eatujang:bilibili_like"
+    },
+    "B": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "result": {
+    "item": "eatujang:bilibili_coin",
+    "count": 2
+  },
+  "show_notification": true
+}

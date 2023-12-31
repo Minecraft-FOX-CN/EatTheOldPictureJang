@@ -1,0 +1,6 @@
+{
+  "parent": "eatujang:item/template_ne_giant_shovel",
+  "textures": {
+    "layer0": "eatujang:item/ne_giant_shovel"
+  }
+}

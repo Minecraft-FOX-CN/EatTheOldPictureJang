@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "eatujang:bilibili_like"
+    }
+  ],
+  "result": {
+    "item": "eatujang:bilibili_bookmark"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "eatujang:bilibili_like"
+    },
+    "B": {
+      "item": "eatujang:bilibili_coin"
+    },
+    "C": {
+      "item": "eatujang:bilibili_bookmark"
+    }
+  },
+  "pattern": [
+    " C ",
+    "ABA",
+    " C "
+  ],
+  "result": {
+    "item": "eatujang:fans_grain_reserves",
+    "count": 8
+  },
+  "show_notification": true
+}

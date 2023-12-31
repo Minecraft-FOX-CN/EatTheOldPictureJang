@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "eatujang",
+	"version": "${version}",
+	"name": "EatTheOldPictureJang",
+	"description": "我要吃图酱，快点，给我吃，我要！",
+	"authors": [
+		"Minecraft_Fox",
+		"幽蓝TV"
+	],
+	"contact": {
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/eatujang/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"eat.tujang.EatTheOldPictureJang"
+		],
+		"client": [
+
+		],
+		"fabric-datagen": [
+			"eat.tujang.EatTheOldPictureJangDataGenerator"
+		]
+	},
+	"mixins": [
+		"eatujang.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.1",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "minecraft:brown_mushroom"
+    },
+    "B": {
+      "item": "eatujang:fans_grain_reserves"
+    },
+    "C": {
+      "item": "eatujang:nor_cooking_cake"
+    }
+  },
+  "pattern": [
+    "ACA",
+    "CBC",
+    "ACA"
+  ],
+  "result": {
+    "item": "eatujang:game_water_enoki",
+    "count": 4
+  },
+  "show_notification": true
+}
