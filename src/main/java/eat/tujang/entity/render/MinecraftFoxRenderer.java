@@ -9,13 +9,11 @@ import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.util.Identifier;
 
 public class MinecraftFoxRenderer extends MobEntityRenderer<MinecraftFoxEntity, PlayerEntityModel<MinecraftFoxEntity>> {
-    public MinecraftFoxRenderer(EntityRendererFactory.Context context) {
-        super(context, new PlayerEntityModel<MinecraftFoxEntity>(context.getPart(EntityModelLayers.PLAYER), false), 0.5f);
+    public MinecraftFoxRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new PlayerEntityModel<MinecraftFoxEntity>(ctx.getPart(EntityModelLayers.PLAYER), false), 0.5f);
     }
-
-
     @Override
     public Identifier getTexture(MinecraftFoxEntity entity) {
-        return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/OldPictureJiangEntity/OldPictureJiangEntity.png");
+        return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/cube/img.png");
     }
 }
