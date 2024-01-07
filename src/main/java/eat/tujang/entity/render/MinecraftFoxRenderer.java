@@ -14,6 +14,6 @@ public class MinecraftFoxRenderer extends MobEntityRenderer<MinecraftFoxEntity, 
     }
     @Override
     public Identifier getTexture(MinecraftFoxEntity entity) {
-        return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/cube/img.png");
+        return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/minecraft_fox/minecraft_fox.png");
     }
 }

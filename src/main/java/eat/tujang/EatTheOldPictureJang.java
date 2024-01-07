@@ -1,19 +1,12 @@
 package eat.tujang;
 
 import eat.tujang.entity.MinecraftFoxEntity;
+import eat.tujang.registry.ModEntities;
 import eat.tujang.registry.ModItemGroup;
 import eat.tujang.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
-import net.minecraft.entity.EntityDimensions;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnGroup;
-import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,18 +17,16 @@ public class EatTheOldPictureJang implements ModInitializer {
     public static final String MOD_ID = "eatujang";
     public static final Logger LOGGER = LoggerFactory.getLogger("eatujang");
 
-    public static final EntityType<MinecraftFoxEntity> MINECRAFT_FOX_ENTITY = Registry.register(
-            Registries.ENTITY_TYPE,
-            new Identifier(MOD_ID, "minecraft_fox"),
-            FabricEntityTypeBuilder
-                    .create(SpawnGroup.CREATURE, MinecraftFoxEntity::new)
-                    .dimensions(EntityDimensions.fixed(1.8f, 0.6f))
-                    .build()
-    );
-
     @Override
     public void onInitialize() {
-        FabricDefaultAttributeRegistry.register(MINECRAFT_FOX_ENTITY, MinecraftFoxEntity.createMobAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntities.MINECRAFT_FOX_ENTITY, MinecraftFoxEntity.createMobAttributes()
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 80.0d)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.6d)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 32.0d)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5.0d)
+                .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 0.325d)
+                .add(EntityAttributes.GENERIC_ARMOR, 2.0d)
+                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 0.5d));
         ModItemGroup.registerModItemGroup();
         ModItems.registerModItems();
     }
