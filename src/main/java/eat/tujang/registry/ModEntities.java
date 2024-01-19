@@ -2,6 +2,7 @@ package eat.tujang.registry;
 
 import eat.tujang.EatTheOldPictureJang;
 import eat.tujang.entity.MinecraftFoxEntity;
+import eat.tujang.entity.OldPictureJangEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.*;
@@ -13,7 +14,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModEntities {
-    public static final EntityType<MinecraftFoxEntity> MINECRAFT_FOX_ENTITY = ModEntities.registerModEntity(
+    public static final EntityType<MinecraftFoxEntity> MINECRAFT_FOX_ENTITY = registerModEntity(
             "minecraft_fox",
             SpawnGroup.CREATURE,
             MinecraftFoxEntity::new,
@@ -21,8 +22,17 @@ public class ModEntities {
             1.8f
     );
 
+    public static final EntityType<OldPictureJangEntity> OLD_PICTURE_JANG_ENTITY_ENTITY = registerModEntity(
+            "old_picture_jang",
+            SpawnGroup.CREATURE,
+            OldPictureJangEntity::new,
+            0.6f,
+            1.8f
+    );
+
     public static void registerModEntitiesAttribute() {
         registerAttribute(MINECRAFT_FOX_ENTITY);
+        registerAttribute(OLD_PICTURE_JANG_ENTITY_ENTITY);
     }
 
     private static <T extends MobEntity> EntityType<T> registerModEntity(String name, SpawnGroup spawnGroup, EntityType.EntityFactory<T> abc, float width, float height) {
