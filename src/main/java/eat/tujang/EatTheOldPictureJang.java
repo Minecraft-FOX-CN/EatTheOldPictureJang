@@ -19,14 +19,7 @@ public class EatTheOldPictureJang implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        FabricDefaultAttributeRegistry.register(ModEntities.MINECRAFT_FOX_ENTITY, MinecraftFoxEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 80.0d)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.6d)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 32.0d)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5.0d)
-                .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 0.325d)
-                .add(EntityAttributes.GENERIC_ARMOR, 2.0d)
-                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 0.5d));
+        ModEntities.registerModEntitiesAttribute();
         ModItemGroup.registerModItemGroup();
         ModItems.registerModItems();
     }
