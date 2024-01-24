@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": {
+        "item": "eatujang:old_picture_jang_food"
+    },
+
+    "X": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "pattern": [
+    "X#X",
+    "#X#",
+    "X#X"
+  ],
+  "result": {
+    "item": "eatujang:old_picture_jang_tnt_block"
+  },
+  "show_notification": true
+}

@@ -32,6 +32,6 @@ public  class OldPictureJiangToolMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ModItems.OLD_PICTURE_JIANG_FOOD);
+        return Ingredient.ofItems(ModItems.OLD_PICTURE_JANG_FOOD);
     }
 }
