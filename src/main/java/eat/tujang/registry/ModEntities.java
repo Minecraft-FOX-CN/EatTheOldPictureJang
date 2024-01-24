@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.*;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -24,20 +23,15 @@ public class ModEntities {
 
     public static final EntityType<OldPictureJangEntity> OLD_PICTURE_JANG_ENTITY_ENTITY = registerModEntity(
             "old_picture_jang",
-            SpawnGroup.CREATURE,
+            SpawnGroup.MONSTER,
             OldPictureJangEntity::new,
             0.6f,
             1.8f
     );
 
-    public static void registerModEntitiesAttribute() {
-        registerAttribute(MINECRAFT_FOX_ENTITY);
-        registerAttribute(OLD_PICTURE_JANG_ENTITY_ENTITY);
-    }
-
-    private static <T extends MobEntity> EntityType<T> registerModEntity(String name, SpawnGroup spawnGroup, EntityType.EntityFactory<T> abc, float width, float height) {
+    private static <T extends MobEntity> EntityType<T> registerModEntity(String name, SpawnGroup spawnGroup, EntityType.EntityFactory<T> entityFactory, float width, float height) {
             EntityType<T> type = FabricEntityTypeBuilder
-                    .create(spawnGroup, abc)
+                    .create(spawnGroup, entityFactory)
                     .dimensions(EntityDimensions.fixed(width, height))
                     .build();
         return Registry.register(Registries.ENTITY_TYPE, new Identifier(EatTheOldPictureJang.MOD_ID, name), type);
@@ -50,6 +44,12 @@ public class ModEntities {
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 32.0d)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5.0d)
                 .add(EntityAttributes.GENERIC_ARMOR, 2.0d));
+    }
+
+    public static void registerModEntitiesAttribute() {
+        registerAttribute(MINECRAFT_FOX_ENTITY);
+        registerAttribute(OLD_PICTURE_JANG_ENTITY_ENTITY);
+        EatTheOldPictureJang.LOGGER.debug("Registering mod entities for" + EatTheOldPictureJang.MOD_ID);
     }
 }
 

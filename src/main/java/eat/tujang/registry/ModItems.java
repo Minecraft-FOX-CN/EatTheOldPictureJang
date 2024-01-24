@@ -36,7 +36,7 @@ public class ModItems {
                     .snack()
                     .statusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 30 * 60 * 20, 15), 1.0f)
                     .build())));
-    public static final Item OLD_PICTURE_JIANG_FOOD = registerItem("old_picture_jiang_food", new Item(new FabricItemSettings()
+    public static final Item OLD_PICTURE_JANG_FOOD = registerItem("old_picture_jang_food", new Item(new FabricItemSettings()
             .food((new FoodComponent.Builder())
                     .hunger(114514)
                     .saturationModifier(114514)
@@ -55,8 +55,7 @@ public class ModItems {
 
 
     public static Item registerItem(String name, Item item) {
-        Item registeredItem = Registry.register(Registries.ITEM, new Identifier(EatTheOldPictureJang.MOD_ID, name), item);
-        return registeredItem;
+        return Registry.register(Registries.ITEM, new Identifier(EatTheOldPictureJang.MOD_ID, name), item);
     }
 
     public static void registerModItems() {

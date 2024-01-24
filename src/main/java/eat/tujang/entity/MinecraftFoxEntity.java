@@ -17,9 +17,9 @@ public class MinecraftFoxEntity extends PathAwareEntity {
     @Override
     protected void initGoals() {
         this.goalSelector.add(2, new AttackGoal(this));
-        this.goalSelector.add(1, new LookAroundGoal(this));
-        this.goalSelector.add(1, new LookAtEntityGoal(this, PlayerEntity.class, 16.0f));
-        this.goalSelector.add(3, new WanderAroundGoal(this, 0.75));
+        this.goalSelector.add(8, new LookAroundGoal(this));
+        this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 16.0f));
+        this.goalSelector.add(1, new WanderAroundGoal(this, 0.75d));
         this.targetSelector.add(2, new ActiveTargetGoal<OldPictureJangEntity>(this, OldPictureJangEntity.class, false));
     }
 }

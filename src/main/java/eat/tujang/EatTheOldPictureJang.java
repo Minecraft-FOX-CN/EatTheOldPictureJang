@@ -1,6 +1,7 @@
 package eat.tujang;
 
 import eat.tujang.entity.MinecraftFoxEntity;
+import eat.tujang.registry.ModBlocks;
 import eat.tujang.registry.ModEntities;
 import eat.tujang.registry.ModItemGroup;
 import eat.tujang.registry.ModItems;
@@ -22,5 +23,6 @@ public class EatTheOldPictureJang implements ModInitializer {
         ModEntities.registerModEntitiesAttribute();
         ModItemGroup.registerModItemGroup();
         ModItems.registerModItems();
+        ModBlocks.registerModBlock();
     }
 }
