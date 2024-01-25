@@ -47,7 +47,7 @@ public class ModItems {
                     .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 20 * 60 * 20, 1), 1.0f)
                     .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 20 * 60 * 20), 1.0f)
                     .build())));
-    public static final Item NE_GIANT_SHOVEL = registerItem("ne_giant_shovel", new ShovelItem(OldPictureJiangToolMaterial.INSTANCE, 16, 8, new FabricItemSettings()));
+    public static final Item NE_GIANT_SHOVEL = registerItem("ne_giant_shovel", new ShovelItem(OldPictureJiangToolMaterial.INSTANCE, 23333, 8, new FabricItemSettings()));
     public static final Item LIKE = registerItem("bilibili_like", new Item(new FabricItemSettings()));
     public static final Item COIN = registerItem("bilibili_coin", new Item(new FabricItemSettings()));
     public static final Item BOOKMARK = registerItem("bilibili_bookmark", new Item(new FabricItemSettings()));

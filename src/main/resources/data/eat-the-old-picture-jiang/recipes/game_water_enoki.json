@@ -12,9 +12,9 @@
     }
   },
   "pattern": [
-    "ACA",
+    " A",
     "CBC",
-    "ACA"
+    " A "
   ],
   "result": {
     "item": "eatujang:game_water_enoki",

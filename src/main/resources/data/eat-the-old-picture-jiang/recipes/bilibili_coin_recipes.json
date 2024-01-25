@@ -5,13 +5,13 @@
       "item": "eatujang:bilibili_like"
     },
     "B": {
-      "item": "minecraft:diamond"
+      "item": "minecraft:copper_ingot"
     }
   },
   "pattern": [
-    "AAA",
+    " A ",
     "ABA",
-    "AAA"
+    " A "
   ],
   "result": {
     "item": "eatujang:bilibili_coin",

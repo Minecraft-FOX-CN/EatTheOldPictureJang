@@ -7,6 +7,10 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.mob.ZombieEntity;
+import net.minecraft.entity.mob.ZombifiedPiglinEntity;
+import net.minecraft.entity.passive.IronGolemEntity;
+import net.minecraft.entity.passive.MerchantEntity;
+import net.minecraft.entity.passive.TurtleEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 
@@ -16,10 +20,14 @@ public class MinecraftFoxEntity extends PathAwareEntity {
     }
     @Override
     protected void initGoals() {
-        this.goalSelector.add(2, new AttackGoal(this));
+        this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
         this.goalSelector.add(8, new LookAroundGoal(this));
-        this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 16.0f));
-        this.goalSelector.add(1, new WanderAroundGoal(this, 0.75d));
-        this.targetSelector.add(2, new ActiveTargetGoal<OldPictureJangEntity>(this, OldPictureJangEntity.class, false));
+        this.initCustomGoals();
+    }
+
+    protected void initCustomGoals() {
+        this.goalSelector.add(2, new AttackGoal(this));
+        this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0));
+        this.targetSelector.add(2, new ActiveTargetGoal<OldPictureJangEntity>((MobEntity)this, OldPictureJangEntity.class, true));
     }
 }
