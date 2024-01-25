@@ -3,6 +3,7 @@ package eat.tujang.registry;
 import eat.tujang.EatTheOldPictureJang;
 import eat.tujang.entity.MinecraftFoxEntity;
 import eat.tujang.entity.OldPictureJangEntity;
+import eat.tujang.entity.OldPictureJangTntEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.*;
@@ -21,7 +22,7 @@ public class ModEntities {
             1.8f
     );
 
-    public static final EntityType<OldPictureJangEntity> OLD_PICTURE_JANG_ENTITY_ENTITY = registerModEntity(
+    public static final EntityType<OldPictureJangEntity> OLD_PICTURE_JANG_ENTITY = registerModEntity(
             "old_picture_jang",
             SpawnGroup.MONSTER,
             OldPictureJangEntity::new,
@@ -29,7 +30,16 @@ public class ModEntities {
             1.8f
     );
 
-    private static <T extends MobEntity> EntityType<T> registerModEntity(String name, SpawnGroup spawnGroup, EntityType.EntityFactory<T> entityFactory, float width, float height) {
+    public static final EntityType<OldPictureJangTntEntity> OLD_PICTURE_JANG_TNT_ENTITY = registerModEntity(
+            "old_picture_jang_tnt",
+            SpawnGroup.CREATURE,
+            OldPictureJangTntEntity::new,
+            1f,
+            1f
+    );
+
+
+    private static <T extends Entity> EntityType<T> registerModEntity(String name, SpawnGroup spawnGroup, EntityType.EntityFactory<T> entityFactory, float width, float height) {
             EntityType<T> type = FabricEntityTypeBuilder
                     .create(spawnGroup, entityFactory)
                     .dimensions(EntityDimensions.fixed(width, height))
@@ -48,7 +58,7 @@ public class ModEntities {
 
     public static void registerModEntitiesAttribute() {
         registerAttribute(MINECRAFT_FOX_ENTITY);
-        registerAttribute(OLD_PICTURE_JANG_ENTITY_ENTITY);
+        registerAttribute(OLD_PICTURE_JANG_ENTITY);
         EatTheOldPictureJang.LOGGER.debug("Registering mod entities for" + EatTheOldPictureJang.MOD_ID);
     }
 }

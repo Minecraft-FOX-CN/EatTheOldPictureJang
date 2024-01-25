@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "eatujang:block/old_picture_jang_tnt_block_bottom",
+    "side": "eatujang:block/old_picture_jang_tnt_block_side",
+    "top": "eatujang:block/old_picture_jang_tnt_block_top"
+  }
+}
