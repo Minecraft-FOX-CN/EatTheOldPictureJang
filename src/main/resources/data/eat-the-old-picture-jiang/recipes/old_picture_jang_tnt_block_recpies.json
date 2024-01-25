@@ -16,7 +16,8 @@
     "X#X"
   ],
   "result": {
-    "item": "eatujang:old_picture_jang_tnt_block"
+    "item": "eatujang:old_picture_jang_tnt_block",
+    "count": 3
   },
   "show_notification": true
 }
