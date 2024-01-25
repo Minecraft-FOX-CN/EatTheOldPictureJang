@@ -26,6 +26,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class OldPictureJangTntBlock extends Block {
     public static final BooleanProperty UNSTABLE = Properties.UNSTABLE;
+
     public OldPictureJangTntBlock(Settings settings) {
         super(settings);
     }
@@ -62,9 +63,9 @@ public class OldPictureJangTntBlock extends Block {
         if (world.isClient) {
             return;
         }
-        OldPictureJangTntEntity oldPictureJangTntEntity = new OldPictureJangTntEntity(world, (double)pos.getX() + 0.5, pos.getY(), (double)pos.getZ() + 0.5, explosion.getCausingEntity());
+        OldPictureJangTntEntity oldPictureJangTntEntity = new OldPictureJangTntEntity(world, (double) pos.getX() + 0.5, pos.getY(), (double) pos.getZ() + 0.5, explosion.getCausingEntity());
         int i = oldPictureJangTntEntity.getFuse();
-        oldPictureJangTntEntity.setFuse((short)(world.random.nextInt(i / 4) + i / 8));
+        oldPictureJangTntEntity.setFuse((short) (world.random.nextInt(i / 4) + i / 8));
         world.spawnEntity(oldPictureJangTntEntity);
     }
 
@@ -76,10 +77,9 @@ public class OldPictureJangTntBlock extends Block {
         if (world.isClient) {
             return;
         }
-        OldPictureJangTntEntity oldPictureJangTntEntity = new OldPictureJangTntEntity(world, (double)pos.getX() + 0.5, pos.getY(), (double)pos.getZ() + 0.5, igniter);
-        world.spawnEntity(oldPictureJangTntEntity);
-        world.playSound(null, oldPictureJangTntEntity.getX(), oldPictureJangTntEntity.getY(), oldPictureJangTntEntity.getZ(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 1.0f, 1.0f);
-        world.emitGameEvent((Entity)igniter, GameEvent.PRIME_FUSE, pos);
+        world.spawnEntity(new OldPictureJangTntEntity(world, (double) pos.getX() + 0.5, pos.getY(), (double) pos.getZ() + 0.5, igniter));
+        world.playSound(null, (double) pos.getX() + 0.5, pos.getY(), (double) pos.getZ() + 0.5, SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 1.0f, 1.0f);
+        world.emitGameEvent((Entity) igniter, GameEvent.PRIME_FUSE, pos);
     }
 
     @Override
@@ -108,7 +108,7 @@ public class OldPictureJangTntBlock extends Block {
             BlockPos blockPos = hit.getBlockPos();
             Entity entity = projectile.getOwner();
             if (projectile.isOnFire() && projectile.canModifyAt(world, blockPos)) {
-                primeTnt(world, blockPos, entity instanceof LivingEntity ? (LivingEntity)entity : null);
+                primeTnt(world, blockPos, entity instanceof LivingEntity ? (LivingEntity) entity : null);
                 world.removeBlock(blockPos, false);
             }
         }

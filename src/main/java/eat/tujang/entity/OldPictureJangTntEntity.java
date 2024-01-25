@@ -1,5 +1,6 @@
 package eat.tujang.entity;
 
+import eat.tujang.registry.ModEntities;
 import net.minecraft.entity.*;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
@@ -20,7 +21,7 @@ public class OldPictureJangTntEntity extends Entity implements Ownable {
     }
 
     public OldPictureJangTntEntity(World world, double x, double y, double z, @Nullable LivingEntity igniter) {
-        this(EntityType.TNT, world);
+        this(ModEntities.OLD_PICTURE_JANG_TNT_ENTITY, world);
         this.setPosition(x, y, z);
         double d = world.random.nextDouble() * 6.2831854820251465;
         this.setVelocity(-Math.sin(d) * 0.02, 0.20000000298023224, -Math.cos(d) * 0.02);
