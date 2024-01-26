@@ -2,8 +2,6 @@ package eat.tujang.entity;
 
 import eat.tujang.registry.ModEntities;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.RespawnAnchorBlock;
 import net.minecraft.entity.*;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
@@ -13,9 +11,6 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.Position;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
@@ -111,7 +106,7 @@ public class OldPictureJangTntEntity extends Entity implements Ownable {
                 return super.getBlastResistance(explosion, world, pos, blockState, fluidState);
             }
         };
-        getWorld().createExplosion(null, getWorld().getDamageSources().explosion(this, this), explosionBehavior, x, y, z, 16.0f, true, World.ExplosionSourceType.TNT);
+        getWorld().createExplosion(null, getWorld().getDamageSources().explosion(this, this), explosionBehavior, x, y, z, 8.0f, true, World.ExplosionSourceType.TNT);
     }
 
     protected void writeCustomDataToNbt(NbtCompound nbt) {

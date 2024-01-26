@@ -1,9 +1,7 @@
 package eat.tujang.registry;
 
 import eat.tujang.EatTheOldPictureJang;
-import eat.tujang.entity.MinecraftFoxEntity;
-import eat.tujang.entity.OldPictureJangEntity;
-import eat.tujang.entity.OldPictureJangTntEntity;
+import eat.tujang.entity.*;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.*;
@@ -30,6 +28,22 @@ public class ModEntities {
             1.8f
     );
 
+    public static final EntityType<UncleNorEntity> UNCLE_NOR_ENTITY = registerModEntity(
+            "uncle_nor",
+            SpawnGroup.CREATURE,
+            UncleNorEntity::new,
+            0.6f,
+            1.8f
+    );
+
+    public static final EntityType<GameWaterEntity> GAME_WATER_ENTITY = registerModEntity(
+            "game_water",
+            SpawnGroup.CREATURE,
+            GameWaterEntity::new,
+            0.6f,
+            1.8f
+    );
+
     public static final EntityType<OldPictureJangTntEntity> OLD_PICTURE_JANG_TNT_ENTITY = registerModEntity(
             "old_picture_jang_tnt",
             SpawnGroup.CREATURE,
@@ -37,6 +51,7 @@ public class ModEntities {
             1f,
             1f
     );
+
 
 
     private static <T extends Entity> EntityType<T> registerModEntity(String name, SpawnGroup spawnGroup, EntityType.EntityFactory<T> entityFactory, float width, float height) {
@@ -59,6 +74,8 @@ public class ModEntities {
     public static void registerModEntitiesAttribute() {
         registerAttribute(MINECRAFT_FOX_ENTITY);
         registerAttribute(OLD_PICTURE_JANG_ENTITY);
+        registerAttribute(GAME_WATER_ENTITY);
+        registerAttribute(UNCLE_NOR_ENTITY);
         EatTheOldPictureJang.LOGGER.debug("Registering mod entities for" + EatTheOldPictureJang.MOD_ID);
     }
 }

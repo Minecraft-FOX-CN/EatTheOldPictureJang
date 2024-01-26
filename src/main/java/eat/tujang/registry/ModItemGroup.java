@@ -25,6 +25,10 @@ public class ModItemGroup {
                         entries.add(ModItems.COIN);
                         entries.add(ModItems.BOOKMARK);
                         entries.add(ModItems.NE_GIANT_SHOVEL);
+                        entries.add(ModItems.MINECRAFT_FOX_SPAWN_EGG);
+                        entries.add(ModItems.GAME_WATER_SPAWN_EGG);
+                        entries.add(ModItems.OLD_PICTURE_JANG_SPAWN_EGG);
+                        entries.add(ModItems.UNCLE_NOR_SPAWN_EGG);
                         entries.add(ModBlocks.OLD_PICTURE_JANG_TNT_BLOCK);
                     })
                     .build());

@@ -1,9 +1,12 @@
 package eat.tujang.registry;
 
 import eat.tujang.EatTheOldPictureJang;
+import eat.tujang.entity.MinecraftFoxEntity;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -52,9 +55,19 @@ public class ModItems {
     public static final Item COIN = registerItem("bilibili_coin", new Item(new FabricItemSettings()));
     public static final Item BOOKMARK = registerItem("bilibili_bookmark", new Item(new FabricItemSettings()));
 
+    public static final Item MINECRAFT_FOX_SPAWN_EGG = registerSpawnEggItem("minecraft_fox_spawn_egg", ModEntities.MINECRAFT_FOX_ENTITY, 0xc4c4c4, 0xadadad, new FabricItemSettings());
+    public static final Item GAME_WATER_SPAWN_EGG = registerSpawnEggItem("game_water_spawn_egg", ModEntities.GAME_WATER_ENTITY, 0xc4c4c4, 0xadadad, new FabricItemSettings());
+    public static final Item OLD_PICTURE_JANG_SPAWN_EGG = registerSpawnEggItem("old_picture_jang_spawn_egg", ModEntities.OLD_PICTURE_JANG_ENTITY, 0xc4c4c4, 0xadadad, new FabricItemSettings());
+    public static final Item UNCLE_NOR_SPAWN_EGG = registerSpawnEggItem("uncle_nor_spawn_egg", ModEntities.UNCLE_NOR_ENTITY, 0xc4c4c4, 0xadadad, new FabricItemSettings());
+
+
 
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(EatTheOldPictureJang.MOD_ID, name), item);
+    }
+
+    public static Item registerSpawnEggItem(String name, EntityType<? extends MobEntity> entity, int primaryColor, int dotColor, FabricItemSettings fabricItemSettings) {
+        return Registry.register(Registries.ITEM, new Identifier(EatTheOldPictureJang.MOD_ID, name), new SpawnEggItem(entity, primaryColor, dotColor, fabricItemSettings));
     }
 
     public static void registerModItems() {

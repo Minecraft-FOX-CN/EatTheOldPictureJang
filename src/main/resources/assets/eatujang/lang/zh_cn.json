@@ -7,6 +7,15 @@
   "item.eatujang.bilibili_like": "点赞",
   "item.eatujang.bilibili_bookmark": "收藏",
   "item.eatujang.ne_giant_shovel": "东北大铁锹",
+  "item.eatujang.minecraft_fox_spawn_egg": "minecraft_fox刷怪蛋",
+  "item.eatujang.game_water_spawn_egg": "GW刷怪蛋",
+  "item.eatujang.old_picture_jang_spawn_egg": "老图酱刷怪蛋",
+  "item.eatujang.uncle_nor_spawn_egg": "Nor叔刷怪蛋",
   "block.eatujang.old_picture_jang_tnt_block": "图酱炸药",
-  "itemgroup.eatujang.old_picture_jang": "吃掉老图酱！"
+  "itemgroup.eatujang.old_picture_jang": "吃掉老图酱！",
+  "entity.eatujang.minecraft_fox": "minecraft_fox",
+  "entity.eatujang.old_picture_jang": "老图酱",
+  "entity.eatujang.old_picture_jang_tnt": "图酱炸药",
+  "entity.eatujang.game_water": "GW",
+  "entity.eatujang.uncle_nor": "Nor叔"
 }
