@@ -44,6 +44,14 @@ public class ModEntities {
             1.8f
     );
 
+    public static final EntityType<MuMuEntity> MUMU_ENTITY = registerModEntity(
+            "mumu",
+            SpawnGroup.CREATURE,
+            MuMuEntity::new,
+            0.6f,
+            1.8f
+    );
+
     public static final EntityType<OldPictureJangTntEntity> OLD_PICTURE_JANG_TNT_ENTITY = registerModEntity(
             "old_picture_jang_tnt",
             SpawnGroup.CREATURE,
@@ -62,20 +70,21 @@ public class ModEntities {
         return Registry.register(Registries.ENTITY_TYPE, new Identifier(EatTheOldPictureJang.MOD_ID, name), type);
     }
 
-    private static void registerAttribute(EntityType<? extends LivingEntity> entityType) {
+    private static void registerAttribute(EntityType<? extends LivingEntity> entityType, double health, double movement_speed, double follow_range, double damage, double armor) {
         FabricDefaultAttributeRegistry.register(entityType, MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 80.0d)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.35d)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 32.0d)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 5.0d)
-                .add(EntityAttributes.GENERIC_ARMOR, 2.0d));
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, health)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, movement_speed)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, follow_range)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, damage)
+                .add(EntityAttributes.GENERIC_ARMOR, armor));
     }
 
     public static void registerModEntitiesAttribute() {
-        registerAttribute(MINECRAFT_FOX_ENTITY);
-        registerAttribute(OLD_PICTURE_JANG_ENTITY);
-        registerAttribute(GAME_WATER_ENTITY);
-        registerAttribute(UNCLE_NOR_ENTITY);
+        registerAttribute(MINECRAFT_FOX_ENTITY, 60d, 0.4d, 64d, 5d, 4d);
+        registerAttribute(OLD_PICTURE_JANG_ENTITY, 40d, 0.35d, 32d, 5d, 2d);
+        registerAttribute(GAME_WATER_ENTITY, 60d, 0.3d, 48d, 5d, 3d);
+        registerAttribute(UNCLE_NOR_ENTITY, 120d, 0.5d, 64d, 10d, 6d);
+        registerAttribute(MUMU_ENTITY, 60d, 0.3d, 48d, 5d, 3d);
         EatTheOldPictureJang.LOGGER.debug("Registering mod entities for" + EatTheOldPictureJang.MOD_ID);
     }
 }

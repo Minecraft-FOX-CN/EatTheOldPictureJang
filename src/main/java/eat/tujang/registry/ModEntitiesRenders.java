@@ -10,6 +10,7 @@ public class ModEntitiesRenders {
         EntityRendererRegistry.register(ModEntities.OLD_PICTURE_JANG_ENTITY, OldPictureJangRenderer::new);
         EntityRendererRegistry.register(ModEntities.UNCLE_NOR_ENTITY, UncleNorRenderer::new);
         EntityRendererRegistry.register(ModEntities.GAME_WATER_ENTITY, GameWaterRenderer::new);
+        EntityRendererRegistry.register(ModEntities.MUMU_ENTITY, MuMuRenderer::new);
         EntityRendererRegistry.register(ModEntities.OLD_PICTURE_JANG_TNT_ENTITY, OldPictureJangTntRenderer::new);
         EatTheOldPictureJang.LOGGER.debug("Registering mod entities renders for" + EatTheOldPictureJang.MOD_ID);
     }
