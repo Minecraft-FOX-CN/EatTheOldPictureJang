@@ -9,7 +9,9 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -21,7 +23,7 @@ import java.util.Optional;
 
 public class OldPictureJangTntEntity extends Entity implements Ownable {
     private static final TrackedData<Integer> FUSE;
-    private static final int DEFAULT_FUSE = 80;
+    private static final int DEFAULT_FUSE = 100;
     @Nullable
     private LivingEntity causingEntity;
 
@@ -33,9 +35,9 @@ public class OldPictureJangTntEntity extends Entity implements Ownable {
     public OldPictureJangTntEntity(World world, double x, double y, double z, @Nullable LivingEntity igniter) {
         this(ModEntities.OLD_PICTURE_JANG_TNT_ENTITY, world);
         this.setPosition(x, y, z);
-        double d = world.random.nextDouble() * 6.2831854820251465;
-        this.setVelocity(-Math.sin(d) * 0.02, 0.20000000298023224, -Math.cos(d) * 0.02);
-        this.setFuse(80);
+        double d = world.random.nextDouble() * 6.283;
+        this.setVelocity(-Math.sin(d) * 0.02, 0.2, -Math.cos(d) * 0.02);
+        this.setFuse(DEFAULT_FUSE);
         this.prevX = x;
         this.prevY = y;
         this.prevZ = z;
@@ -61,6 +63,13 @@ public class OldPictureJangTntEntity extends Entity implements Ownable {
             this.setVelocity(this.getVelocity().add(0.0, -0.04, 0.0));
         }
 
+        if (this.getFuse() % 20 == 0) {
+            if (this.causingEntity != null) {
+                this.causingEntity.sendMessage(Text.of(this.getFuse() / 20+Text.translatable("text.eatujang.explosion_countdown").getString()));
+            }
+            getWorld().playSoundFromEntity(null, this, SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.VOICE, 5.0f, 1.0f);
+        }
+
         this.move(MovementType.SELF, this.getVelocity());
         this.setVelocity(this.getVelocity().multiply(0.98));
         if (this.isOnGround()) {
@@ -69,44 +78,30 @@ public class OldPictureJangTntEntity extends Entity implements Ownable {
 
         int i = this.getFuse() - 1;
         this.setFuse(i);
+
+
         if (i <= 0) {
             this.discard();
             if (!this.getWorld().isClient) {
-                this.explode(this.getX(), this.getY() + 0.5, this.getZ());
+                this.explode(this.getX(), this.getY() + 0.5, this.getZ(), 16.0f);
             }
         } else {
             this.updateWaterState();
+
             if (this.getWorld().isClient) {
-                this.getWorld().addParticle(ParticleTypes.SMOKE, this.getX(), this.getY() + 0.5, this.getZ(), 0.0, 0.0, 0.0);
+                this.getWorld().addParticle(ParticleTypes.LAVA, this.getX(), this.getY() + 0.5, this.getZ(), 0.0, 0.0, 0.0);
             }
         }
-
     }
 
-    private static boolean hasStillWater(BlockPos pos, World world) {
-        FluidState fluidState = world.getFluidState(pos);
-        if (!fluidState.isIn(FluidTags.WATER)) {
-            return false;
-        }
-        if (fluidState.isStill()) {
-            return true;
-        }
-        float f = fluidState.getLevel();
-        if (f < 2.0f) {
-            return false;
-        }
-        FluidState fluidState2 = world.getFluidState(pos.down());
-        return !fluidState2.isIn(FluidTags.WATER);
-    }
-
-    private void explode(double x, double y, double z) {
+    private void explode(double x, double y, double z, float power) {
         ExplosionBehavior explosionBehavior = new ExplosionBehavior() {
             @Override
             public Optional<Float> getBlastResistance(Explosion explosion, BlockView world, BlockPos pos, BlockState blockState, FluidState fluidState) {
                 return super.getBlastResistance(explosion, world, pos, blockState, fluidState);
             }
         };
-        getWorld().createExplosion(null, getWorld().getDamageSources().explosion(this, this), explosionBehavior, x, y, z, 8.0f, true, World.ExplosionSourceType.TNT);
+        this.getWorld().createExplosion(null, getWorld().getDamageSources().explosion(this, this), explosionBehavior, x, y, z, power, true, World.ExplosionSourceType.TNT);
     }
 
     protected void writeCustomDataToNbt(NbtCompound nbt) {
@@ -131,7 +126,7 @@ public class OldPictureJangTntEntity extends Entity implements Ownable {
     }
 
     public int getFuse() {
-        return (Integer) this.dataTracker.get(FUSE);
+        return this.dataTracker.get(FUSE);
     }
 
     static {

@@ -17,5 +17,6 @@
   "entity.eatujang.old_picture_jang": "老图酱",
   "entity.eatujang.old_picture_jang_tnt": "图酱炸药",
   "entity.eatujang.game_water": "GW",
-  "entity.eatujang.uncle_nor": "Nor叔"
+  "entity.eatujang.uncle_nor": "Nor叔",
+  "text.eatujang.explosion_countdown": "秒后爆炸"
 }

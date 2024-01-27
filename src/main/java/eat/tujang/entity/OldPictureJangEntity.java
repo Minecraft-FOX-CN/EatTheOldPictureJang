@@ -25,4 +25,8 @@ public class OldPictureJangEntity extends PathAwareEntity {
         this.targetSelector.add(2, new ActiveTargetGoal<PlayerEntity>((MobEntity)this, PlayerEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<IronGolemEntity>((MobEntity)this, IronGolemEntity.class, true));
     }
+
+    public void tick() {
+
+    }
 }

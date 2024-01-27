@@ -17,5 +17,6 @@
   "entity.eatujang.old_picture_jang": "tujang",
   "entity.eatujang.uncle_nor": "uncle nor",
   "entity.eatujang.game_water": "GW",
-  "entity.eatujang.old_picture_jang_tnt": "tujang tnt"
+  "entity.eatujang.old_picture_jang_tnt": "tujang tnt",
+  "text.eatujang.explosion_countdown": " seconds to explosion"
 }

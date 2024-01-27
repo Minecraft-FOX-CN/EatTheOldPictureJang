@@ -15,6 +15,6 @@ public class UncleNorRenderer extends MobEntityRenderer<UncleNorEntity, PlayerEn
     }
     @Override
     public Identifier getTexture(UncleNorEntity entity) {
-        return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/old_picture_jang/old_picture_jang.png");
+        return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/uncle_nor/uncle_nor.png");
     }
 }

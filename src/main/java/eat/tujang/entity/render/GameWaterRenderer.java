@@ -15,6 +15,6 @@ public class GameWaterRenderer extends MobEntityRenderer<GameWaterEntity, Player
     }
     @Override
     public Identifier getTexture(GameWaterEntity entity) {
-        return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/old_picture_jang/old_picture_jang.png");
+        return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/game_water/game_water.png");
     }
 }

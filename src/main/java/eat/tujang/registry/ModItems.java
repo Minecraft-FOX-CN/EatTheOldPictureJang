@@ -55,9 +55,9 @@ public class ModItems {
     public static final Item COIN = registerItem("bilibili_coin", new Item(new FabricItemSettings()));
     public static final Item BOOKMARK = registerItem("bilibili_bookmark", new Item(new FabricItemSettings()));
 
-    public static final Item MINECRAFT_FOX_SPAWN_EGG = registerSpawnEggItem("minecraft_fox_spawn_egg", ModEntities.MINECRAFT_FOX_ENTITY, 0xc4c4c4, 0xadadad, new FabricItemSettings());
-    public static final Item GAME_WATER_SPAWN_EGG = registerSpawnEggItem("game_water_spawn_egg", ModEntities.GAME_WATER_ENTITY, 0xc4c4c4, 0xadadad, new FabricItemSettings());
-    public static final Item OLD_PICTURE_JANG_SPAWN_EGG = registerSpawnEggItem("old_picture_jang_spawn_egg", ModEntities.OLD_PICTURE_JANG_ENTITY, 0xc4c4c4, 0xadadad, new FabricItemSettings());
+    public static final Item MINECRAFT_FOX_SPAWN_EGG = registerSpawnEggItem("minecraft_fox_spawn_egg", ModEntities.MINECRAFT_FOX_ENTITY, 0xf7ad7b, 0xdc8245, new FabricItemSettings());
+    public static final Item GAME_WATER_SPAWN_EGG = registerSpawnEggItem("game_water_spawn_egg", ModEntities.GAME_WATER_ENTITY, 0x080f26, 0x3c0d76, new FabricItemSettings());
+    public static final Item OLD_PICTURE_JANG_SPAWN_EGG = registerSpawnEggItem("old_picture_jang_spawn_egg", ModEntities.OLD_PICTURE_JANG_ENTITY, 0x00b8f3, 0xec1c24, new FabricItemSettings());
     public static final Item UNCLE_NOR_SPAWN_EGG = registerSpawnEggItem("uncle_nor_spawn_egg", ModEntities.UNCLE_NOR_ENTITY, 0xc4c4c4, 0xadadad, new FabricItemSettings());
 
 

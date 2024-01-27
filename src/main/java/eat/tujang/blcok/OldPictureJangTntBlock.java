@@ -15,6 +15,7 @@ import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -78,7 +79,6 @@ public class OldPictureJangTntBlock extends Block {
             return;
         }
         world.spawnEntity(new OldPictureJangTntEntity(world, (double) pos.getX() + 0.5, pos.getY(), (double) pos.getZ() + 0.5, igniter));
-        world.playSound(null, (double) pos.getX() + 0.5, pos.getY(), (double) pos.getZ() + 0.5, SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 1.0f, 1.0f);
         world.emitGameEvent((Entity) igniter, GameEvent.PRIME_FUSE, pos);
     }
 
