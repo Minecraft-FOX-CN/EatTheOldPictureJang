@@ -24,9 +24,8 @@ public class OldPictureJangEntity extends PathAwareEntity {
         this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0));
         this.targetSelector.add(2, new ActiveTargetGoal<PlayerEntity>((MobEntity)this, PlayerEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal<IronGolemEntity>((MobEntity)this, IronGolemEntity.class, true));
-    }
-
-    public void tick() {
-
+        this.targetSelector.add(2, new ActiveTargetGoal<GameWaterEntity>((MobEntity)this, GameWaterEntity.class, true));
+        this.targetSelector.add(2, new ActiveTargetGoal<MinecraftFoxEntity>((MobEntity)this, MinecraftFoxEntity.class, true));
+        this.targetSelector.add(2, new ActiveTargetGoal<UncleNorEntity>((MobEntity)this, UncleNorEntity.class, true));
     }
 }
