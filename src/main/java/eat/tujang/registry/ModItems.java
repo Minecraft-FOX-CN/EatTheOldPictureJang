@@ -50,7 +50,7 @@ public class ModItems {
                     .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 20 * 60 * 20, 1), 1.0f)
                     .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 20 * 60 * 20), 1.0f)
                     .build())));
-    public static final Item NE_GIANT_SHOVEL = registerItem("ne_giant_shovel", new ShovelItem(OldPictureJiangToolMaterial.INSTANCE, 23333, 8, new FabricItemSettings()));
+    public static final Item NE_GIANT_SHOVEL = registerItem("ne_giant_shovel", new ShovelItem(OldPictureJiangToolMaterial.INSTANCE, 233, 8, new FabricItemSettings()));
     public static final Item LIKE = registerItem("bilibili_like", new Item(new FabricItemSettings()));
     public static final Item COIN = registerItem("bilibili_coin", new Item(new FabricItemSettings()));
     public static final Item BOOKMARK = registerItem("bilibili_bookmark", new Item(new FabricItemSettings()));
@@ -58,7 +58,8 @@ public class ModItems {
     public static final Item MINECRAFT_FOX_SPAWN_EGG = registerSpawnEggItem("minecraft_fox_spawn_egg", ModEntities.MINECRAFT_FOX_ENTITY, 0xf7ad7b, 0xdc8245, new FabricItemSettings());
     public static final Item GAME_WATER_SPAWN_EGG = registerSpawnEggItem("game_water_spawn_egg", ModEntities.GAME_WATER_ENTITY, 0x080f26, 0x3c0d76, new FabricItemSettings());
     public static final Item OLD_PICTURE_JANG_SPAWN_EGG = registerSpawnEggItem("old_picture_jang_spawn_egg", ModEntities.OLD_PICTURE_JANG_ENTITY, 0x00b8f3, 0xec1c24, new FabricItemSettings());
-    public static final Item UNCLE_NOR_SPAWN_EGG = registerSpawnEggItem("uncle_nor_spawn_egg", ModEntities.UNCLE_NOR_ENTITY, 0xc4c4c4, 0xffd30d, new FabricItemSettings());
+    public static final Item UNCLE_NOR_SPAWN_EGG = registerSpawnEggItem("uncle_nor_spawn_egg", ModEntities.UNCLE_NOR_ENTITY, 0xffd30d, 0xfcdeae, new FabricItemSettings());
+    public static final Item MUMU_SPAWN_EGG = registerSpawnEggItem("mumu_spawn_egg", ModEntities.MUMU_ENTITY, 0x000000, 0xffffff, new FabricItemSettings());
 
 
 

@@ -1,7 +1,6 @@
 package eat.tujang.entity.render;
 
 import eat.tujang.EatTheOldPictureJang;
-import eat.tujang.entity.MinecraftFoxEntity;
 import eat.tujang.entity.OldPictureJangEntity;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
