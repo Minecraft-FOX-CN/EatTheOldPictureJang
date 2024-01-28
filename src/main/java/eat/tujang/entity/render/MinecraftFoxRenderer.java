@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 
 public class MinecraftFoxRenderer extends MobEntityRenderer<MinecraftFoxEntity, PlayerEntityModel<MinecraftFoxEntity>> {
     public MinecraftFoxRenderer(EntityRendererFactory.Context ctx) {
-        super(ctx, new PlayerEntityModel<MinecraftFoxEntity>(ctx.getPart(EntityModelLayers.PLAYER), false), 0.5f);
+        super(ctx, new PlayerEntityModel<>(ctx.getPart(EntityModelLayers.PLAYER), false), 0.5f);
     }
     @Override
     public Identifier getTexture(MinecraftFoxEntity entity) {

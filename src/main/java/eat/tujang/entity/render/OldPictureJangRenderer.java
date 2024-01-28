@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 
 public class OldPictureJangRenderer extends MobEntityRenderer<OldPictureJangEntity, PlayerEntityModel<OldPictureJangEntity>> {
     public OldPictureJangRenderer(EntityRendererFactory.Context ctx) {
-        super(ctx, new PlayerEntityModel<OldPictureJangEntity>(ctx.getPart(EntityModelLayers.PLAYER), false), 0.5f);
+        super(ctx, new PlayerEntityModel<>(ctx.getPart(EntityModelLayers.PLAYER), false), 0.5f);
     }
     @Override
     public Identifier getTexture(OldPictureJangEntity entity) {
