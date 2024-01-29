@@ -12,6 +12,7 @@
   "item.eatujang.old_picture_jang_spawn_egg": "老图酱刷怪蛋",
   "item.eatujang.uncle_nor_spawn_egg": "Nor叔刷怪蛋",
   "item.eatujang.mumu_spawn_egg": "帝刷怪蛋",
+  "item.eatujang.bule_tv_spawn_egg": "幽蓝TV刷怪蛋",
   "block.eatujang.old_picture_jang_tnt_block": "图酱炸药",
   "itemgroup.eatujang.old_picture_jang": "吃掉老图酱！",
   "entity.eatujang.minecraft_fox": "minecraft_fox",
@@ -20,5 +21,6 @@
   "entity.eatujang.game_water": "GW",
   "entity.eatujang.uncle_nor": "Nor叔",
   "entity.eatujang.mumu": "帝",
+  "entity.eatujang.bule_tv": "幽蓝TV",
   "text.eatujang.explosion_countdown": "秒后爆炸"
 }

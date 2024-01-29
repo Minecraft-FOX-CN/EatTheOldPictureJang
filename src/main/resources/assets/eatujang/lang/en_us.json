@@ -12,6 +12,7 @@
   "item.eatujang.old_picture_jang_spawn_egg": "tujang spawn egg",
   "item.eatujang.uncle_nor_spawn_egg": "uncle nor spawn egg",
   "item.eatujang.mumu_spawn_egg": "mumu spawn egg",
+  "item.eatujang.bule_tv_spawn_egg": "bule tv spawn egg",
   "block.eatujang.old_picture_jang_tnt_block": "tujang tnt",
   "itemgroup.eatujang.old_picture_jang": "eat the Old Picture Jiang!",
   "entity.eatujang.minecraft_fox": "minecraft_fox",
@@ -19,6 +20,7 @@
   "entity.eatujang.uncle_nor": "uncle nor",
   "entity.eatujang.game_water": "GW",
   "entity.eatujang.mumu": "mumu",
+  "entity.eatujang.bule_tv": "bule tv",
   "entity.eatujang.old_picture_jang_tnt": "tujang tnt",
   "text.eatujang.explosion_countdown": " seconds to explosion"
 }

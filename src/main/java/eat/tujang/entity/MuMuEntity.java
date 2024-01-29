@@ -21,6 +21,6 @@ public class MuMuEntity extends PathAwareEntity {
     protected void initCustomGoals() {
         this.goalSelector.add(2, new AttackGoal(this));
         this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0));
-        this.targetSelector.add(2, new ActiveTargetGoal<OldPictureJangEntity>((MobEntity)this, OldPictureJangEntity.class, true));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, OldPictureJangEntity.class, true));
     }
 }

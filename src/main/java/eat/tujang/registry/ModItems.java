@@ -60,6 +60,7 @@ public class ModItems {
     public static final Item OLD_PICTURE_JANG_SPAWN_EGG = registerSpawnEggItem("old_picture_jang_spawn_egg", ModEntities.OLD_PICTURE_JANG_ENTITY, 0x00b8f3, 0xec1c24, new FabricItemSettings());
     public static final Item UNCLE_NOR_SPAWN_EGG = registerSpawnEggItem("uncle_nor_spawn_egg", ModEntities.UNCLE_NOR_ENTITY, 0xffd30d, 0xfcdeae, new FabricItemSettings());
     public static final Item MUMU_SPAWN_EGG = registerSpawnEggItem("mumu_spawn_egg", ModEntities.MUMU_ENTITY, 0x000000, 0xffffff, new FabricItemSettings());
+    public static final Item BULE_TV_SPAWN_EGG = registerSpawnEggItem("bule_tv_spawn_egg", ModEntities.BULE_TV_ENTITY, 0x8386f5, 0x6262f5, new FabricItemSettings());
 
 
 

@@ -22,10 +22,12 @@ public class OldPictureJangEntity extends PathAwareEntity {
     protected void initCustomGoals() {
         this.goalSelector.add(2, new AttackGoal(this));
         this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0));
-        this.targetSelector.add(2, new ActiveTargetGoal<PlayerEntity>((MobEntity)this, PlayerEntity.class, true));
-        this.targetSelector.add(3, new ActiveTargetGoal<IronGolemEntity>((MobEntity)this, IronGolemEntity.class, true));
-        this.targetSelector.add(2, new ActiveTargetGoal<GameWaterEntity>((MobEntity)this, GameWaterEntity.class, true));
-        this.targetSelector.add(2, new ActiveTargetGoal<MinecraftFoxEntity>((MobEntity)this, MinecraftFoxEntity.class, true));
-        this.targetSelector.add(2, new ActiveTargetGoal<UncleNorEntity>((MobEntity)this, UncleNorEntity.class, true));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(3, new ActiveTargetGoal<>(this, IronGolemEntity.class, true));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, GameWaterEntity.class, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, MinecraftFoxEntity.class, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, MuMuEntity.class, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, UncleNorEntity.class, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, BuleTvEntity.class, false));
     }
 }

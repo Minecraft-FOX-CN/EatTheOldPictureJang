@@ -30,6 +30,7 @@ public class ModItemGroup {
                         entries.add(ModItems.OLD_PICTURE_JANG_SPAWN_EGG);
                         entries.add(ModItems.UNCLE_NOR_SPAWN_EGG);
                         entries.add(ModItems.MUMU_SPAWN_EGG);
+                        entries.add(ModItems.BULE_TV_SPAWN_EGG);
                         entries.add(ModBlocks.OLD_PICTURE_JANG_TNT_BLOCK);
                     })
                     .build());

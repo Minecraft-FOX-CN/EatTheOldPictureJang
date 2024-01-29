@@ -52,6 +52,14 @@ public class ModEntities {
             1.8f
     );
 
+    public static final EntityType<BuleTvEntity> BULE_TV_ENTITY = registerModEntity(
+            "bule_tv",
+            SpawnGroup.CREATURE,
+            BuleTvEntity::new,
+            1.8f,
+            0.6f
+    );
+
     public static final EntityType<OldPictureJangTntEntity> OLD_PICTURE_JANG_TNT_ENTITY = registerModEntity(
             "old_picture_jang_tnt",
             SpawnGroup.CREATURE,
@@ -59,8 +67,6 @@ public class ModEntities {
             1f,
             1f
     );
-
-
 
     private static <T extends Entity> EntityType<T> registerModEntity(String name, SpawnGroup spawnGroup, EntityType.EntityFactory<T> entityFactory, float width, float height) {
             EntityType<T> type = FabricEntityTypeBuilder
@@ -80,11 +86,12 @@ public class ModEntities {
     }
 
     public static void registerModEntitiesAttribute() {
-        registerAttribute(MINECRAFT_FOX_ENTITY, 60d, 0.4d, 64d, 5d, 4d);
+        registerAttribute(MINECRAFT_FOX_ENTITY, 80d, 0.4d, 64d, 5d, 4d);
         registerAttribute(OLD_PICTURE_JANG_ENTITY, 40d, 0.35d, 32d, 5d, 2d);
-        registerAttribute(GAME_WATER_ENTITY, 60d, 0.3d, 48d, 5d, 3d);
+        registerAttribute(GAME_WATER_ENTITY, 80d, 0.3d, 48d, 5d, 3d);
         registerAttribute(UNCLE_NOR_ENTITY, 120d, 0.5d, 64d, 10d, 6d);
         registerAttribute(MUMU_ENTITY, 60d, 0.3d, 48d, 5d, 3d);
+        registerAttribute(BULE_TV_ENTITY, 80d, 0.4d, 64d, 5d, 4d);
         EatTheOldPictureJang.LOGGER.debug("Registering mod entities for" + EatTheOldPictureJang.MOD_ID);
     }
 }

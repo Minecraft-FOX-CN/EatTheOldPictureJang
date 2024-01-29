@@ -50,7 +50,7 @@ public class OldPictureJangTntBlock extends Block {
 
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if (!world.isClient() && !player.isCreative() && state.get(UNSTABLE).booleanValue()) {
+        if (!world.isClient() && !player.isCreative() && state.get(UNSTABLE)) {
             primeTnt(world, pos);
         }
         super.onBreak(world, pos, state, player);
@@ -76,7 +76,7 @@ public class OldPictureJangTntBlock extends Block {
             return;
         }
         world.spawnEntity(new OldPictureJangTntEntity(world, (double) pos.getX() + 0.5, pos.getY(), (double) pos.getZ() + 0.5, igniter));
-        world.emitGameEvent((Entity) igniter, GameEvent.PRIME_FUSE, pos);
+        world.emitGameEvent(igniter, GameEvent.PRIME_FUSE, pos);
     }
 
     @Override

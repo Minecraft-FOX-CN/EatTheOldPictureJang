@@ -2,13 +2,12 @@ package eat.tujang.entity;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 
-public class GameWaterEntity extends PathAwareEntity {
-    public GameWaterEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+public class BuleTvEntity extends PathAwareEntity {
+    public BuleTvEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
     @Override
