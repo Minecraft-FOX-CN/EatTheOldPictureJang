@@ -1,10 +1,12 @@
-package eat.tujang.registry;
+package eat.tujang.material;
 
+import eat.tujang.registry.ModItems;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public  class OldPictureJiangToolMaterial implements ToolMaterial {
-    public static final OldPictureJiangToolMaterial INSTANCE = new OldPictureJiangToolMaterial();
+public  class OldPictureJangToolMaterial implements ToolMaterial {
+    public static final OldPictureJangToolMaterial INSTANCE = new OldPictureJangToolMaterial();
+
     @Override
     public int getDurability() {
         return 2333;

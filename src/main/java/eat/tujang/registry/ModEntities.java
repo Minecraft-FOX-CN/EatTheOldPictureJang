@@ -56,8 +56,8 @@ public class ModEntities {
             "bule_tv",
             SpawnGroup.CREATURE,
             BuleTvEntity::new,
-            1.8f,
-            0.6f
+            0.6f,
+            1.8f
     );
 
     public static final EntityType<OldPictureJangTntEntity> OLD_PICTURE_JANG_TNT_ENTITY = registerModEntity(
