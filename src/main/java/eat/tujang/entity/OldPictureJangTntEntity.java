@@ -47,7 +47,7 @@ public class OldPictureJangTntEntity extends Entity implements Ownable {
 
     @Override
     protected void initDataTracker() {
-        this.dataTracker.startTracking(FUSE, 80);
+        this.dataTracker.startTracking(FUSE, DEFAULT_FUSE);
     }
 
     protected Entity.MoveEffect getMoveEffect() {

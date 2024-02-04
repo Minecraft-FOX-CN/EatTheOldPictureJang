@@ -9,9 +9,9 @@
   "item.eatujang.ne_giant_shovel": "东北大铁锹",
   "item.eatujang.old_picture_jang_ingot": "图酱锭",
   "item.eatujang.old_picture_jang_helmet": "图酱头罩",
-  "item.eatujang.old_picture_jang_chestplate": "图酱胸甲",
-  "item.eatujang.old_picture_jang_leggings": "图酱护腿",
-  "item.eatujang.old_picture_jang_boots": "图酱鞋子",
+  "item.eatujang.old_picture_jang_chestplate": "图酱战甲",
+  "item.eatujang.old_picture_jang_leggings": "图酱腿甲",
+  "item.eatujang.old_picture_jang_boots": "图酱硬鞋",
   "item.eatujang.minecraft_fox_spawn_egg": "MinecraftFox刷怪蛋",
   "item.eatujang.game_water_spawn_egg": "GW刷怪蛋",
   "item.eatujang.old_picture_jang_spawn_egg": "老图酱刷怪蛋",
@@ -27,5 +27,8 @@
   "entity.eatujang.uncle_nor": "Nor叔",
   "entity.eatujang.mumu": "帝",
   "entity.eatujang.bule_tv": "幽蓝TV",
-  "text.eatujang.explosion_countdown": "秒后爆炸"
+  "text.eatujang.explosion_countdown": "秒后爆炸",
+  "text.eatujang.on_old_picture_jang_block_break": "为什么把我给挖了!?!?!?",
+  "tooltip.eatujang.old_picture_jang.introduction.1": "按下Shift键",
+  "tooltip.eatujang.old_picture_jang.introduction": "当你尝试把它挖掉时，他可能会生气"
 }

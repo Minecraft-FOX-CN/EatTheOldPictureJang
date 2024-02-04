@@ -46,11 +46,12 @@ public class ModItems {
                     .saturationModifier(114514)
                     .alwaysEdible()
                     .snack()
-                    .statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 20 * 60 * 20, 15), 1.0f)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 20 * 60 * 20, 14), 1.0f)
                     .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, 20 * 60 * 20, 2), 1.0f)
                     .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20 * 60 * 20, 2), 1.0f)
-                    .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 20 * 60 * 20, 1), 1.0f)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 20 * 60 * 20), 1.0f)
                     .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 20 * 60 * 20), 1.0f)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20 * 60 * 20, 8), 1.0F)
                     .build())));
 
     public static final Item NE_GIANT_SHOVEL = registerItem("ne_giant_shovel", new ShovelItem(OldPictureJangToolMaterial.INSTANCE, 233, 8, new FabricItemSettings()));

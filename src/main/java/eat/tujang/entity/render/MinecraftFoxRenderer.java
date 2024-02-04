@@ -6,6 +6,7 @@ import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
+import net.minecraft.entity.data.TrackedData;
 import net.minecraft.util.Identifier;
 
 public class MinecraftFoxRenderer extends MobEntityRenderer<MinecraftFoxEntity, PlayerEntityModel<MinecraftFoxEntity>> {

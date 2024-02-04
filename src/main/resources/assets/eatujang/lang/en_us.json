@@ -27,5 +27,8 @@
   "entity.eatujang.mumu": "mumu",
   "entity.eatujang.bule_tv": "bule tv",
   "entity.eatujang.old_picture_jang_tnt": "tujang tnt",
-  "text.eatujang.explosion_countdown": " seconds to explosion"
+  "text.eatujang.explosion_countdown": " seconds to explosion",
+  "text.eatujang.on_old_picture_jang_block_break": "why you break me !?!?!?",
+  "tooltip.eatujang.old_picture_jang.introduction.1": "Press Shift",
+  "tooltip.eatujang.old_picture_jang.introduction": "When you break it, it be angry angry"
 }
