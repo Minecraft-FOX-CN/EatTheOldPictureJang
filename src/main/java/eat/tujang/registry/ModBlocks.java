@@ -1,6 +1,7 @@
 package eat.tujang.registry;
 
 import eat.tujang.EatTheOldPictureJang;
+import eat.tujang.block.OldPictureJangBlock;
 import eat.tujang.block.OldPictureJangTntBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -18,6 +19,11 @@ public class ModBlocks {
             .mapColor(DyeColor.CYAN)
             .breakInstantly()
             .burnable()), new FabricItemSettings());
+
+    public static final Block OLD_PICTURE_JANG_BLOCK = registerBlock("old_picture_jang_block", new OldPictureJangBlock(FabricBlockSettings.create()
+            .sounds(BlockSoundGroup.METAL)
+            .mapColor(DyeColor.BLUE)
+            .strength(16f)), new FabricItemSettings().fireproof());
 
     public static Block registerBlock(String name, Block block, FabricItemSettings fabricItemSettings) {
         ModItems.registerItem(name, new BlockItem(block, fabricItemSettings));

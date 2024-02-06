@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+        "item": "eatujang:old_picture_jang_ingot"
+    }
+  },
+  "pattern": [
+    "# #",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "eatujang:old_picture_jang_chestplate"
+  },
+  "show_notification": true
+}

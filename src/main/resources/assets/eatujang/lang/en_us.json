@@ -19,6 +19,7 @@
   "item.eatujang.mumu_spawn_egg": "mumu spawn egg",
   "item.eatujang.bule_tv_spawn_egg": "bule tv spawn egg",
   "block.eatujang.old_picture_jang_tnt_block": "tujang tnt",
+  "block.eatujang.old_picture_jang_block": "tujang block",
   "itemgroup.eatujang.old_picture_jang": "eat the Old Picture Jiang!",
   "entity.eatujang.minecraft_fox": "MinecraftFox",
   "entity.eatujang.old_picture_jang": "tujang",
@@ -29,6 +30,6 @@
   "entity.eatujang.old_picture_jang_tnt": "tujang tnt",
   "text.eatujang.explosion_countdown": " seconds to explosion",
   "text.eatujang.on_old_picture_jang_block_break": "why you break me !?!?!?",
-  "tooltip.eatujang.old_picture_jang.introduction.1": "Press Shift",
-  "tooltip.eatujang.old_picture_jang.introduction": "When you break it, it be angry angry"
+  "tooltip.eatujang.old_picture_jang.introduction": "Press Shift",
+  "tooltip.eatujang.old_picture_jang.introduction.1": "When you break it, it be angry angry"
 }
