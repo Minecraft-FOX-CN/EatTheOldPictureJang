@@ -1,4 +1,4 @@
-package eat.tujang.entity;
+package eat.tujang.common.entity;
 
 import eat.tujang.registry.ModEntities;
 import net.minecraft.block.BlockState;

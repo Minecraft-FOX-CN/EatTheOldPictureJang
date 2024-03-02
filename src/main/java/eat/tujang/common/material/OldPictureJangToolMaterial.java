@@ -1,4 +1,4 @@
-package eat.tujang.material;
+package eat.tujang.common.material;
 
 import eat.tujang.registry.ModItems;
 import net.minecraft.item.ToolMaterial;

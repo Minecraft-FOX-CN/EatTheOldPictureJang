@@ -1,4 +1,4 @@
-package eat.tujang.entity;
+package eat.tujang.common.entity;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;

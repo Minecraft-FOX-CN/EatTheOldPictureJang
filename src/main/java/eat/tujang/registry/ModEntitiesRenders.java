@@ -1,7 +1,7 @@
 package eat.tujang.registry;
 
 import eat.tujang.EatTheOldPictureJang;
-import eat.tujang.entity.render.*;
+import eat.tujang.common.entity.render.*;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 
 public class ModEntitiesRenders {

@@ -1,7 +1,7 @@
 package eat.tujang.registry;
 
 import eat.tujang.EatTheOldPictureJang;
-import eat.tujang.entity.*;
+import eat.tujang.common.entity.*;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.*;
@@ -12,61 +12,71 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModEntities {
-    public static final EntityType<MinecraftFoxEntity> MINECRAFT_FOX_ENTITY = registerModEntity(
-            "minecraft_fox",
-            SpawnGroup.CREATURE,
-            MinecraftFoxEntity::new,
-            0.6f,
-            1.8f
-    );
+    public static EntityType<MinecraftFoxEntity> MINECRAFT_FOX_ENTITY;
+    public static EntityType<OldPictureJangEntity> OLD_PICTURE_JANG_ENTITY;
+    public static EntityType<UncleNorEntity> UNCLE_NOR_ENTITY;
+    public static EntityType<GameWaterEntity> GAME_WATER_ENTITY;
+    public static EntityType<MuMuEntity> MUMU_ENTITY;
+    public static EntityType<BuleTvEntity> BULE_TV_ENTITY;
+    public static EntityType<OldPictureJangTntEntity> OLD_PICTURE_JANG_TNT_ENTITY;
+    
+    static {
+        MINECRAFT_FOX_ENTITY = registerModEntity(
+                "minecraft_fox",
+                SpawnGroup.CREATURE,
+                MinecraftFoxEntity::new,
+                0.6f,
+                1.8f
+        );
 
-    public static final EntityType<OldPictureJangEntity> OLD_PICTURE_JANG_ENTITY = registerModEntity(
-            "old_picture_jang",
-            SpawnGroup.MONSTER,
-            OldPictureJangEntity::new,
-            0.6f,
-            1.8f
-    );
+        OLD_PICTURE_JANG_ENTITY = registerModEntity(
+                "old_picture_jang",
+                SpawnGroup.MONSTER,
+                OldPictureJangEntity::new,
+                0.6f,
+                1.8f
+        );
 
-    public static final EntityType<UncleNorEntity> UNCLE_NOR_ENTITY = registerModEntity(
-            "uncle_nor",
-            SpawnGroup.CREATURE,
-            UncleNorEntity::new,
-            0.6f,
-            1.8f
-    );
+        UNCLE_NOR_ENTITY = registerModEntity(
+                "uncle_nor",
+                SpawnGroup.CREATURE,
+                UncleNorEntity::new,
+                0.6f,
+                1.8f
+        );
 
-    public static final EntityType<GameWaterEntity> GAME_WATER_ENTITY = registerModEntity(
-            "game_water",
-            SpawnGroup.CREATURE,
-            GameWaterEntity::new,
-            0.6f,
-            1.8f
-    );
+        GAME_WATER_ENTITY = registerModEntity(
+                "game_water",
+                SpawnGroup.CREATURE,
+                GameWaterEntity::new,
+                0.6f,
+                1.8f
+        );
 
-    public static final EntityType<MuMuEntity> MUMU_ENTITY = registerModEntity(
-            "mumu",
-            SpawnGroup.CREATURE,
-            MuMuEntity::new,
-            0.6f,
-            1.8f
-    );
+        MUMU_ENTITY = registerModEntity(
+                "mumu",
+                SpawnGroup.CREATURE,
+                MuMuEntity::new,
+                0.6f,
+                1.8f
+        );
 
-    public static final EntityType<BuleTvEntity> BULE_TV_ENTITY = registerModEntity(
-            "bule_tv",
-            SpawnGroup.CREATURE,
-            BuleTvEntity::new,
-            0.6f,
-            1.8f
-    );
+        BULE_TV_ENTITY = registerModEntity(
+                "bule_tv",
+                SpawnGroup.CREATURE,
+                BuleTvEntity::new,
+                0.6f,
+                1.8f
+        );
 
-    public static final EntityType<OldPictureJangTntEntity> OLD_PICTURE_JANG_TNT_ENTITY = registerModEntity(
-            "old_picture_jang_tnt",
-            SpawnGroup.CREATURE,
-            OldPictureJangTntEntity::new,
-            1f,
-            1f
-    );
+        OLD_PICTURE_JANG_TNT_ENTITY = registerModEntity(
+                "old_picture_jang_tnt",
+                SpawnGroup.CREATURE,
+                OldPictureJangTntEntity::new,
+                1f,
+                1f
+        );
+    }
 
     private static <T extends Entity> EntityType<T> registerModEntity(String name, SpawnGroup spawnGroup, EntityType.EntityFactory<T> entityFactory, float width, float height) {
             EntityType<T> type = FabricEntityTypeBuilder

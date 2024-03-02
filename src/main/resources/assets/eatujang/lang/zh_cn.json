@@ -31,5 +31,7 @@
   "text.eatujang.explosion_countdown": "秒后爆炸",
   "text.eatujang.on_old_picture_jang_block_break": "为什么把我给挖了!?!?!?",
   "tooltip.eatujang.old_picture_jang.introduction": "按下Shift键",
-  "tooltip.eatujang.old_picture_jang.introduction.1": "当你尝试把它挖掉时，他可能会生气"
+  "tooltip.eatujang.old_picture_jang.introduction.1": "当你尝试把它挖掉时，他可能会生气",
+  "screen.eatujang.old_picture_jang_inventory_insurance": "理赔界面",
+  "screen.eatujang.old_picture_jang_start_insurance": "开始理赔"
 }

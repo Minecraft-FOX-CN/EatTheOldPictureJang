@@ -1,6 +1,6 @@
-package eat.tujang.entity.render;
+package eat.tujang.common.entity.render;
 
-import eat.tujang.entity.OldPictureJangTntEntity;
+import eat.tujang.common.entity.OldPictureJangTntEntity;
 import eat.tujang.registry.ModBlocks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

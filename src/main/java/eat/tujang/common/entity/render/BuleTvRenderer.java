@@ -1,19 +1,19 @@
-package eat.tujang.entity.render;
+package eat.tujang.common.entity.render;
 
 import eat.tujang.EatTheOldPictureJang;
-import eat.tujang.entity.MuMuEntity;
+import eat.tujang.common.entity.BuleTvEntity;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.util.Identifier;
 
-public class MuMuRenderer extends MobEntityRenderer<MuMuEntity, PlayerEntityModel<MuMuEntity>> {
-    public MuMuRenderer(EntityRendererFactory.Context ctx) {
+public class BuleTvRenderer extends MobEntityRenderer<BuleTvEntity, PlayerEntityModel<BuleTvEntity>> {
+    public BuleTvRenderer(EntityRendererFactory.Context ctx) {
         super(ctx, new PlayerEntityModel<>(ctx.getPart(EntityModelLayers.PLAYER), false), 0.5f);
     }
     @Override
-    public Identifier getTexture(MuMuEntity entity) {
-        return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/mumu/mumu.png");
+    public Identifier getTexture(BuleTvEntity entity) {
+        return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/bule_tv/bule_tv.png");
     }
 }

@@ -31,5 +31,7 @@
   "text.eatujang.explosion_countdown": " seconds to explosion",
   "text.eatujang.on_old_picture_jang_block_break": "why you break me !?!?!?",
   "tooltip.eatujang.old_picture_jang.introduction": "Press Shift",
-  "tooltip.eatujang.old_picture_jang.introduction.1": "When you break it, it be angry angry"
+  "tooltip.eatujang.old_picture_jang.introduction.1": "When you break it, it be angry angry",
+  "screen.eatujang.old_picture_jang_inventory_insurance": "inventory insurance screen",
+  "screen.eatujang.old_picture_jang_start_insurance": "start insurance"
 }

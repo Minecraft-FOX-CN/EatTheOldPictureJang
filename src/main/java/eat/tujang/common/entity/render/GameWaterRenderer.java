@@ -1,7 +1,7 @@
-package eat.tujang.entity.render;
+package eat.tujang.common.entity.render;
 
 import eat.tujang.EatTheOldPictureJang;
-import eat.tujang.entity.GameWaterEntity;
+import eat.tujang.common.entity.GameWaterEntity;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayers;

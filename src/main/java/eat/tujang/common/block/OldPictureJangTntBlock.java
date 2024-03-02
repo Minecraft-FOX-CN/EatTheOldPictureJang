@@ -1,6 +1,6 @@
-package eat.tujang.block;
+package eat.tujang.common.block;
 
-import eat.tujang.entity.OldPictureJangTntEntity;
+import eat.tujang.common.entity.OldPictureJangTntEntity;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;

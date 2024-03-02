@@ -1,13 +1,7 @@
 package eat.tujang;
 
-import eat.tujang.entity.MinecraftFoxEntity;
-import eat.tujang.registry.ModBlocks;
-import eat.tujang.registry.ModEntities;
-import eat.tujang.registry.ModItemGroup;
-import eat.tujang.registry.ModItems;
+import eat.tujang.registry.*;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.minecraft.entity.attribute.EntityAttributes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,5 +18,6 @@ public class EatTheOldPictureJang implements ModInitializer {
         ModItemGroup.registerModItemGroup();
         ModItems.registerModItems();
         ModBlocks.registerModBlock();
+        ModBlockEntities.registerModBlockEntities();
     }
 }

@@ -1,12 +1,11 @@
-package eat.tujang.entity.render;
+package eat.tujang.common.entity.render;
 
 import eat.tujang.EatTheOldPictureJang;
-import eat.tujang.entity.MinecraftFoxEntity;
+import eat.tujang.common.entity.MinecraftFoxEntity;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
-import net.minecraft.entity.data.TrackedData;
 import net.minecraft.util.Identifier;
 
 public class MinecraftFoxRenderer extends MobEntityRenderer<MinecraftFoxEntity, PlayerEntityModel<MinecraftFoxEntity>> {
