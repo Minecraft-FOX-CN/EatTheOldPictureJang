@@ -19,5 +19,6 @@ public class EatTheOldPictureJang implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlock();
         ModBlockEntities.registerModBlockEntities();
+        ModKeyBinding.registerModKeyBinding();
     }
 }
