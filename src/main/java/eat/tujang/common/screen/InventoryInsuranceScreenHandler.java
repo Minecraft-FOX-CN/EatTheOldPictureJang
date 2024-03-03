@@ -1,6 +1,7 @@
 package eat.tujang.common.screen;
 
 import eat.tujang.registry.ModScreenAndScreenHandler;
+import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -38,6 +39,8 @@ public class InventoryInsuranceScreenHandler extends ScreenHandler {
                 this.addSlot(new Slot(inventory, l + m * 3, 62 + l * 18, 17 + m * 18));
             }
         }
+
+
         // 玩家物品栏
         for (m = 0; m < 3; ++m) {
             for (l = 0; l < 9; ++l) {
@@ -79,5 +82,9 @@ public class InventoryInsuranceScreenHandler extends ScreenHandler {
         }
 
         return newStack;
+    }
+
+    public Inventory getInventory() {
+        return this.inventory;
     }
 }

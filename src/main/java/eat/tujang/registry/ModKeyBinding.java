@@ -14,7 +14,7 @@ public class ModKeyBinding {
             "key.eatujang.sprint",
             InputUtil.Type.KEYSYM,
             GLFW.GLFW_KEY_R,
-            "category.eatujang.EatOldPictureJang"
+            "category.eatujang.old_picture_jang_armor_skill"
     ));
 
     public static void registerModKeyBinding() {

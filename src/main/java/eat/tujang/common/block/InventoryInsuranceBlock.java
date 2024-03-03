@@ -9,12 +9,15 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+
+import java.util.OptionalInt;
 
 public class InventoryInsuranceBlock extends BlockWithEntity {
     public InventoryInsuranceBlock(Settings settings) {
@@ -33,11 +36,14 @@ public class InventoryInsuranceBlock extends BlockWithEntity {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient) {
+        if (!world.isClient && !player.isCreative()) {
             NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, pos);
             if (screenHandlerFactory != null) {
                 player.openHandledScreen(screenHandlerFactory);
             }
+        }
+        else if (player.isCreative()) {
+            player.sendMessage(Text.translatable(""));
         }
         return ActionResult.SUCCESS;
     }

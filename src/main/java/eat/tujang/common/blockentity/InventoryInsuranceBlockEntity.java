@@ -52,4 +52,8 @@ public class InventoryInsuranceBlockEntity extends BlockEntity implements NamedS
     public DefaultedList<ItemStack> getItems() {
         return inventory;
     }
+
+    public void setInventory(DefaultedList<ItemStack> inventory_) {
+        this.inventory = inventory_;
+    }
 }
