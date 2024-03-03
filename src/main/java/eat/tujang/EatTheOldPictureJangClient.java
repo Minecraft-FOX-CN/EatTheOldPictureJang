@@ -1,6 +1,5 @@
 package eat.tujang;
 
-import eat.tujang.registry.ModEntities;
 import eat.tujang.registry.ModEntitiesRenders;
 import eat.tujang.registry.ModScreenAndScreenHandler;
 import net.fabricmc.api.ClientModInitializer;

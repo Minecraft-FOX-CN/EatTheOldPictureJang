@@ -9,8 +9,8 @@ import net.minecraft.sound.SoundEvents;
 
 public class OldPictureJangArmorMaterial implements ArmorMaterial {
     public static final ArmorMaterial OLD_PICTURE_JANG_ARMOR_MATERIAL = new OldPictureJangArmorMaterial();
-    private static final int[] BASE_DURABILITY = new int[] {864, 960, 1024, 768};
-    private static final int[] PROTECTION_VALUES = new int[] {23333, 233333, 233333, 23333};
+    private static final int[] BASE_DURABILITY = new int[]{864, 960, 1024, 768};
+    private static final int[] PROTECTION_VALUES = new int[]{23333, 233333, 233333, 23333};
 
     @Override
     public int getDurability(ArmorItem.Type type) {

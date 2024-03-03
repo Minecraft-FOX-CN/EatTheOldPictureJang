@@ -15,9 +15,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RotationAxis;
 
-@Environment(value= EnvType.CLIENT)
+@Environment(value = EnvType.CLIENT)
 public class OldPictureJangTntRenderer extends EntityRenderer<OldPictureJangTntEntity> {
     private final BlockRenderManager blockRenderManager;
+
     public OldPictureJangTntRenderer(EntityRendererFactory.Context ctx) {
         super(ctx);
         this.shadowRadius = 0.5f;
@@ -29,8 +30,8 @@ public class OldPictureJangTntRenderer extends EntityRenderer<OldPictureJangTntE
         matrixStack.push();
         matrixStack.translate(0.0f, 0.5f, 0.0f);
         int j = oldPictureJangTntEntity.getFuse();
-        if ((float)j - g + 1.0f < 10.0f) {
-            float h = 1.0f - ((float)j - g + 1.0f) / 10.0f;
+        if ((float) j - g + 1.0f < 10.0f) {
+            float h = 1.0f - ((float) j - g + 1.0f) / 10.0f;
             h = MathHelper.clamp(h, 0.0f, 1.0f);
             h *= h;
             h *= h;

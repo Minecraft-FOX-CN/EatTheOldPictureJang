@@ -20,6 +20,7 @@ import org.jetbrains.annotations.Nullable;
 public class InventoryInsuranceBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
 
     public DefaultedList<ItemStack> inventory = DefaultedList.ofSize(9, ItemStack.EMPTY);
+
     public InventoryInsuranceBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.INVENTORY_INSURANCE_BLOCK_ENTITY, pos, state);
     }

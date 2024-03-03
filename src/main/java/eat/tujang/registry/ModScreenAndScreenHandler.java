@@ -11,10 +11,12 @@ import net.minecraft.util.Identifier;
 
 public class ModScreenAndScreenHandler {
     public static final ScreenHandlerType<InventoryInsuranceScreenHandler> INVENTORY_INSURANCE_SCREEN_HANDLER;
+
     static {
         INVENTORY_INSURANCE_SCREEN_HANDLER = registerModScreenHandler("inventory_insurance_block", InventoryInsuranceScreenHandler::new);
     }
-    public static <T extends ScreenHandler>ScreenHandlerType<T> registerModScreenHandler(String id, ScreenHandlerRegistry.SimpleClientHandlerFactory<T> screenFactory) {
+
+    public static <T extends ScreenHandler> ScreenHandlerType<T> registerModScreenHandler(String id, ScreenHandlerRegistry.SimpleClientHandlerFactory<T> screenFactory) {
         return ScreenHandlerRegistry.registerSimple(new Identifier(EatTheOldPictureJang.MOD_ID, id), screenFactory);
     }
 

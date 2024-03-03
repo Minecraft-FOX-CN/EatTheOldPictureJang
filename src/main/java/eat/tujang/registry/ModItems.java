@@ -34,7 +34,7 @@ public class ModItems {
     public static Item BULE_TV_SPAWN_EGG;
 
     static {
-         NOR_COOKING_CAKE = registerItem("nor_cooking_cake", new Item(new FabricItemSettings()
+        NOR_COOKING_CAKE = registerItem("nor_cooking_cake", new Item(new FabricItemSettings()
                 .food((new FoodComponent.Builder())
                         .hunger(114514)
                         .saturationModifier(114514)

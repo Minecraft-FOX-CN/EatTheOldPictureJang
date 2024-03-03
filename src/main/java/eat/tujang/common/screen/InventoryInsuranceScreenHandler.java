@@ -1,7 +1,6 @@
 package eat.tujang.common.screen;
 
 import eat.tujang.registry.ModScreenAndScreenHandler;
-import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;

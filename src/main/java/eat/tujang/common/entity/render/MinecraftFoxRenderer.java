@@ -12,6 +12,7 @@ public class MinecraftFoxRenderer extends MobEntityRenderer<MinecraftFoxEntity, 
     public MinecraftFoxRenderer(EntityRendererFactory.Context ctx) {
         super(ctx, new PlayerEntityModel<>(ctx.getPart(EntityModelLayers.PLAYER), false), 0.5f);
     }
+
     @Override
     public Identifier getTexture(MinecraftFoxEntity entity) {
         return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/minecraft_fox/minecraft_fox.png");

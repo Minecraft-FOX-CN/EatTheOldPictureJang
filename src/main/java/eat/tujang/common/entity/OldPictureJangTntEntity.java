@@ -65,7 +65,7 @@ public class OldPictureJangTntEntity extends Entity implements Ownable {
 
         if (this.getFuse() % 20 == 0) {
             if (this.causingEntity != null) {
-                this.causingEntity.sendMessage(Text.of(this.getFuse() / 20+Text.translatable("text.eatujang.explosion_countdown").getString()));
+                this.causingEntity.sendMessage(Text.of(this.getFuse() / 20 + Text.translatable("text.eatujang.explosion_countdown").getString()));
             }
             getWorld().playSoundFromEntity(null, this, SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.VOICE, 5.0f, 1.0f);
         }

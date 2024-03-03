@@ -10,6 +10,7 @@ public class MuMuEntity extends PathAwareEntity {
     public MuMuEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
+
     @Override
     protected void initGoals() {
         this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));

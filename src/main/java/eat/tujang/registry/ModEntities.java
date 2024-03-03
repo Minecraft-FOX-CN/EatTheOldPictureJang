@@ -19,7 +19,7 @@ public class ModEntities {
     public static EntityType<MuMuEntity> MUMU_ENTITY;
     public static EntityType<BuleTvEntity> BULE_TV_ENTITY;
     public static EntityType<OldPictureJangTntEntity> OLD_PICTURE_JANG_TNT_ENTITY;
-    
+
     static {
         MINECRAFT_FOX_ENTITY = registerModEntity(
                 "minecraft_fox",
@@ -79,10 +79,10 @@ public class ModEntities {
     }
 
     private static <T extends Entity> EntityType<T> registerModEntity(String name, SpawnGroup spawnGroup, EntityType.EntityFactory<T> entityFactory, float width, float height) {
-            EntityType<T> type = FabricEntityTypeBuilder
-                    .create(spawnGroup, entityFactory)
-                    .dimensions(EntityDimensions.fixed(width, height))
-                    .build();
+        EntityType<T> type = FabricEntityTypeBuilder
+                .create(spawnGroup, entityFactory)
+                .dimensions(EntityDimensions.fixed(width, height))
+                .build();
         return Registry.register(Registries.ENTITY_TYPE, new Identifier(EatTheOldPictureJang.MOD_ID, name), type);
     }
 

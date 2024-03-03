@@ -19,6 +19,7 @@ public class ModBlockEntities {
                 ModBlocks.INVENTORY_INSURANCE_BLOCK,
                 FabricBlockEntityTypeBuilder.create(InventoryInsuranceBlockEntity::new, ModBlocks.INVENTORY_INSURANCE_BLOCK).build(null));
     }
+
     public static <T extends BlockEntity> BlockEntityType<T> registerBlockEntity(String name, Block block, BlockEntityType<T> factory) {
         return Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(name, EatTheOldPictureJang.MOD_ID), factory);
     }

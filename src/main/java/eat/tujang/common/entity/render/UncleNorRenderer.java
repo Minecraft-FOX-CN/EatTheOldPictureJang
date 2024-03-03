@@ -12,6 +12,7 @@ public class UncleNorRenderer extends MobEntityRenderer<UncleNorEntity, PlayerEn
     public UncleNorRenderer(EntityRendererFactory.Context ctx) {
         super(ctx, new PlayerEntityModel<>(ctx.getPart(EntityModelLayers.PLAYER), false), 0.5f);
     }
+
     @Override
     public Identifier getTexture(UncleNorEntity entity) {
         return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/uncle_nor/uncle_nor.png");

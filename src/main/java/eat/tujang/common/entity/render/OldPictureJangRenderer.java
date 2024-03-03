@@ -12,6 +12,7 @@ public class OldPictureJangRenderer extends MobEntityRenderer<OldPictureJangEnti
     public OldPictureJangRenderer(EntityRendererFactory.Context ctx) {
         super(ctx, new PlayerEntityModel<>(ctx.getPart(EntityModelLayers.PLAYER), false), 0.5f);
     }
+
     @Override
     public Identifier getTexture(OldPictureJangEntity entity) {
         return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/old_picture_jang/old_picture_jang.png");

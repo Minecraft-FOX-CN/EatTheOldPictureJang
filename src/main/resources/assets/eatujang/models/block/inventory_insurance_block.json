@@ -3,6 +3,6 @@
   "textures": {
     "bottom": "eatujang:block/old_picture_jang_block/old_picture_jang_block_bottom",
     "side": "eatujang:block/old_picture_jang_block/old_picture_jang_block_side",
-    "top": "eatujang:block/old_picture_jang_block/old_picture_jang_block_top"
+    "top": "eatujang:block/inventory_insurance_block/inventory_insurance_block_top"
   }
 }

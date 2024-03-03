@@ -12,6 +12,7 @@ public class MuMuRenderer extends MobEntityRenderer<MuMuEntity, PlayerEntityMode
     public MuMuRenderer(EntityRendererFactory.Context ctx) {
         super(ctx, new PlayerEntityModel<>(ctx.getPart(EntityModelLayers.PLAYER), false), 0.5f);
     }
+
     @Override
     public Identifier getTexture(MuMuEntity entity) {
         return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/mumu/mumu.png");

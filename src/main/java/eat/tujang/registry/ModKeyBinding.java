@@ -25,7 +25,7 @@ public class ModKeyBinding {
                 Yaw = playerEntity.getYaw();
                 while (sprint.wasPressed() && isFutureBattlegearArmor(playerEntity.getInventory())) {
 //                    playerEntity.addVelocity(5 * Math.sin(0 - playerEntity.getYaw() / 180 * Math.PI), -(playerEntity.getPitch() / 45), 5 * Math.cos(0 - playerEntity.getYaw() / 180 * Math.PI));
-                    playerEntity.addVelocity(5 * Math.cos(Math.PI/2 + Yaw / 180 * Math.PI), -(playerEntity.getPitch() / 45), 5 * Math.sin(Math.PI/2 + playerEntity.getYaw() / 180 * Math.PI));
+                    playerEntity.addVelocity(5 * Math.cos(Math.PI / 2 + Yaw / 180 * Math.PI), -(playerEntity.getPitch() / 45), 5 * Math.sin(Math.PI / 2 + playerEntity.getYaw() / 180 * Math.PI));
                 }
             }
         });

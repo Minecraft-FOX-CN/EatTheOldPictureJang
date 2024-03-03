@@ -1,7 +1,6 @@
 package eat.tujang.common.block;
 
 import eat.tujang.common.blockentity.InventoryInsuranceBlockEntity;
-import eat.tujang.registry.ModBlockEntities;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
@@ -16,8 +15,6 @@ import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
-import java.util.OptionalInt;
 
 public class InventoryInsuranceBlock extends BlockWithEntity {
     public InventoryInsuranceBlock(Settings settings) {
@@ -41,8 +38,7 @@ public class InventoryInsuranceBlock extends BlockWithEntity {
             if (screenHandlerFactory != null) {
                 player.openHandledScreen(screenHandlerFactory);
             }
-        }
-        else if (player.isCreative()) {
+        } else if (player.isCreative()) {
             player.sendMessage(Text.translatable(""));
         }
         return ActionResult.SUCCESS;
@@ -53,13 +49,14 @@ public class InventoryInsuranceBlock extends BlockWithEntity {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof InventoryInsuranceBlockEntity) {
-                ItemScatterer.spawn(world, pos, (InventoryInsuranceBlockEntity)blockEntity);
+                ItemScatterer.spawn(world, pos, (InventoryInsuranceBlockEntity) blockEntity);
                 // 更新比较器
-                world.updateComparators(pos,this);
+                world.updateComparators(pos, this);
             }
             super.onStateReplaced(state, world, pos, newState, moved);
         }
     }
+
 
     @Override
     public boolean hasComparatorOutput(BlockState state) {

@@ -12,6 +12,7 @@ public class GameWaterRenderer extends MobEntityRenderer<GameWaterEntity, Player
     public GameWaterRenderer(EntityRendererFactory.Context ctx) {
         super(ctx, new PlayerEntityModel<>(ctx.getPart(EntityModelLayers.PLAYER), false), 0.5f);
     }
+
     @Override
     public Identifier getTexture(GameWaterEntity entity) {
         return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/game_water/game_water.png");

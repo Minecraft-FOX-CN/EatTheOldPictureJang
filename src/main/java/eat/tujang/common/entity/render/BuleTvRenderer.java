@@ -12,6 +12,7 @@ public class BuleTvRenderer extends MobEntityRenderer<BuleTvEntity, PlayerEntity
     public BuleTvRenderer(EntityRendererFactory.Context ctx) {
         super(ctx, new PlayerEntityModel<>(ctx.getPart(EntityModelLayers.PLAYER), false), 0.5f);
     }
+
     @Override
     public Identifier getTexture(BuleTvEntity entity) {
         return new Identifier(EatTheOldPictureJang.MOD_ID, "textures/entity/bule_tv/bule_tv.png");

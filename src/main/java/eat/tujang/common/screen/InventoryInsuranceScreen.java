@@ -3,17 +3,13 @@ package eat.tujang.common.screen;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
-import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.render.*;
+import net.minecraft.client.render.GameRenderer;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class InventoryInsuranceScreen extends HandledScreen<InventoryInsuranceScreenHandler> {
     private static final Identifier TEXTURE = new Identifier("minecraft", "textures/gui/container/dispenser.png");
-    public static ButtonWidget startInsuranceButton = ButtonWidget.builder(Text.translatable(""), button -> {
-
-    }).build();
 
     public InventoryInsuranceScreen(InventoryInsuranceScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
@@ -38,6 +34,7 @@ public class InventoryInsuranceScreen extends HandledScreen<InventoryInsuranceSc
 
     @Override
     protected void init() {
+        super.init();
         titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
     }
 }

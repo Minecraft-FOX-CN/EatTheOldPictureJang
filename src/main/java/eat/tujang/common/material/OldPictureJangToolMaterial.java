@@ -4,7 +4,7 @@ import eat.tujang.registry.ModItems;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public  class OldPictureJangToolMaterial implements ToolMaterial {
+public class OldPictureJangToolMaterial implements ToolMaterial {
     public static final OldPictureJangToolMaterial INSTANCE = new OldPictureJangToolMaterial();
 
     @Override
